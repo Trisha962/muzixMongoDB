@@ -12,3 +12,7 @@ public interface TrackRepository extends MongoRepository<Track,Integer> {
     @Query("{'trackRating':{$gte:4}}")
     public List<Track> findByRating(Integer trackRating);
 }
+//By defining custom queries in a repository, developers can easily retrieve
+// data from the database based on specific criteria.
+
+//when you want to get result on the basis of nested data ..

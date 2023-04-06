@@ -19,7 +19,8 @@ public class TrackController {
     public TrackController(TrackService trackService) {
         this.trackService = trackService;
     }
-    @PostMapping("add/music")
+    //http://localhost:8089/api/v1/add-music
+    @PostMapping("add-music")
     public ResponseEntity<?> add(@RequestBody Track track) throws MusicAlreadyExistException {
         return new ResponseEntity<>(trackService.addTrack(track), HttpStatus.OK);
     }
